@@ -16,5 +16,17 @@
   </head>
   <body class="container">
     <app-root></app-root>
+    <script type="text/javascript">
+      (function() {
+          // Obtiene el parámetro de consulta redirect
+          var params = new URLSearchParams(window.location.search);
+          var redirect = params.get('redirect');
+          
+          // Redirige a la URL original usando el historial del navegador
+          if (redirect) {
+              window.history.replaceState(null, '', redirect);
+          }
+      })();
+  </script>
   </body>
 </html>

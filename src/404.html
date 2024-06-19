@@ -1,0 +1,9 @@
+<!-- 404.html -->
+<script type="text/javascript">
+    // Redirige a index.html y agrega la ruta original como parámetro de consulta
+    var redirect = window.location.pathname;
+    var hash = window.location.hash;
+    if (redirect) {
+        window.location.replace('/countriesAppV2/index.html?redirect=' + redirect + (hash ? hash : ''));
+    }
+</script>
