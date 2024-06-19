@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>CountryApp</title>
-    <base href="./">
+    <base href>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <!-- Bootstrap CDN -->
@@ -11,15 +11,17 @@
   <link rel="stylesheet" href="styles-5INURTSO.css"><link rel="modulepreload" href="chunk-U7JWMBQE.js"></head>
   <body class="container">
     <app-root></app-root>
-  <script src="polyfills-6EAL64PA.js" type="module"></script><script src="main-P7I4NQVZ.js" type="module"></script>
-  <script>
-    (function() {
-        var redirect = (new URL(window.location)).searchParams.get('redirect');
-        if (redirect) {
-            window.history.replaceState(null, '', redirect);
-        }
-    })();
-</script>
-</body>
+    <script type="text/javascript">
+      (function() {
+          // Obtener el parámetro de consulta redirect
+          var params = new URLSearchParams(window.location.search);
+          var redirect = params.get('redirect');
+          
+          // Redirigir a la URL original usando el historial del navegador
+          if (redirect) {
+              window.history.replaceState(null, '', redirect);
+          }
+      })();
+  </script>
+  <script src="polyfills-6EAL64PA.js" type="module"></script><script src="main-P7I4NQVZ.js" type="module"></script></body>
 </html>
-
